@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:background="#ffffff">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#eeeeee"
+        android:fitsSystemWindows="true"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolBarStyle"
+        />
+
+
+<RelativeLayout
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_marginBottom="10dp"
+   android:layout_below="@+id/toolbar">
+
+    <!--starting of the Orders Review Section-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:id="@+id/checkout_review_section"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/checkout_review_title_layout"
+        android:background="@color/event_in_progress"
+        android:clickable="true"
+
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Review Order"
+            android:id="@+id/textView22"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/dropdown"
+            android:layout_marginRight="16dp"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/checkout_review_order_layout"
+    android:visibility="visible"
+    android:layout_below="@+id/checkout_review_title_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout_amount_section"
+        android:background="@android:drawable/dialog_holo_light_frame"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Order Summary"
+            android:id="@+id/textView29"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/amount_table"
+            android:layout_alignStart="@+id/amount_table"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/amount_table"
+            android:layout_below="@+id/textView29"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:stretchColumns="*"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                 >
+                <TextView android:text="Total"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16sp" />
+                <TextView android:text="\u20B9250"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/total_amount_checkout"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView android:text="Shipping"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16sp" />
+                <TextView android:text="\u20B90"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/shipping_amount_checkout"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+                <TextView android:text="Applied Coupons"
+                    android:id="@+id/applied_coupon_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16sp" />
+                <TextView android:text="\u20B90"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/coupon_amount_checkout"
+                    android:textSize="16sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <View android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:id="@+id/dashedline"
+            android:background="@drawable/dashed_line"
+            android:layout_below="@+id/amount_table"
+            android:layout_alignLeft="@+id/payable_text"
+            android:layout_alignStart="@+id/payable_text"
+            android:layout_marginTop="5dp" />
+
+
+        <TextView android:text="Payable"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/payable_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/dashedline"
+            android:layout_alignLeft="@+id/amount_table"
+            android:layout_alignStart="@+id/amount_table" />
+
+        <TextView android:text="\u20B9250"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+               android:id="@+id/payable_amount_checkout"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            android:layout_below="@+id/dashedline"
+            android:layout_toRightOf="@+id/textView29"
+            android:layout_toEndOf="@+id/textView29"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:id="@+id/checkout_coupons_layout"
+        android:layout_below="@+id/checkout_amount_section"
+        android:layout_alignLeft="@+id/checkout_amount_section"
+        android:layout_alignStart="@+id/checkout_amount_section"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        >
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/checkout_coupon_text"
+            android:hint="Enter Coupon Code"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:paddingTop="12dp"
+            android:paddingLeft="15dp"
+            android:textSize="16sp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:editable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/apply_button"
+            android:layout_toStartOf="@+id/apply_button" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:text="Apply"
+            android:id="@+id/apply_button"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:background="#619ec6"
+            android:textColor="#ffffffff"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Next Step"
+            android:layout_below="@+id/checkout_coupons_layout"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:background="#df6d33"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/button_proceed_to_address" />
+</RelativeLayout>
+
+
+</RelativeLayout>
+
+    <!--starting of the Address Section-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout_address_section"
+      android:layout_below="@+id/checkout_review_section"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/checkout_address_title_layout"
+            android:background="@color/event_remaining"
+            android:clickable="true"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Addresses"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:id="@+id/textView23" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/dropdown"
+                android:scaleType="fitXY"
+                android:layout_alignBottom="@+id/textView23"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkout_address_child"
+            android:layout_below="@+id/checkout_address_title_layout"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:id="@+id/checkout_address_layout"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="25dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Gaurav Kumar \n#99, 5th Cross,\nMarthahalli\nBangalore - 560037"
+                    android:id="@+id/checkout_address"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingLeft="12dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/textView18"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#666666" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/checkout_address_add_button"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginTop="53dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/plus_new"
+                    android:layout_below="@+id/textView18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Delivery Address"
+                    android:id="@+id/textView18"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/checkout_address"
+                    android:layout_alignStart="@+id/checkout_address"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/separator"
+                    android:background="#aaaaaa"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignBottom="@+id/checkout_address"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toLeftOf="@+id/checkout_address_add_button" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proceed to Next Step"
+                android:layout_below="@+id/checkout_address_layout"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="#df6d33"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:id="@+id/button_proceed_to_options" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--starting of the Date and Time Selection Section-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout_options_section"
+        android:layout_below="@+id/checkout_address_section"
+        android:layout_marginTop="10dp"
+        android:clickable="false">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/checkout_options_title_layout"
+            android:background="@color/event_remaining"
+            android:clickable="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Delivery Options"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:id="@+id/textView24" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView5"
+                android:src="@drawable/dropdown"
+                android:scaleType="fitXY"
+                android:layout_alignBottom="@+id/textView24"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkout_options_child"
+            android:layout_below="@+id/checkout_options_title_layout"
+            android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:id="@+id/checkout_delivery_time_layout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:visibility="visible"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Delivery Date &amp; Time"
+                android:id="@+id/textView19"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView19"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation='horizontal'>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now"
+                android:id="@+id/now_radio_button"
+                android:checked="true"
+                android:layout_marginRight="15dp"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:buttonTint="#777777" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:id="@+id/today_radio_button"
+                android:checked="false"
+                android:textSize="14sp"
+                android:buttonTint="#777777" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tommrow"
+                android:id="@+id/tommrow_radio_button"
+                android:layout_marginLeft="15dp"
+                android:checked="false"
+                 android:textSize="14sp"
+                android:buttonTint="#777777" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:id="@+id/dropdown_time"
+                android:layout_below="@+id/radiogroup_day"
+                android:background="@drawable/dropdown_spinner"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="25dp">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tommorrow, 16 Jan 2016 by 2:30 PM"
+                android:id="@+id/checkout_delivery_datetime"
+                android:textSize="16sp"
+                android:layout_below="@+id/dropdown_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:textStyle="bold|italic"
+                android:layout_marginBottom="10dp" />
+
+
+        </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proceed to Next Step"
+                android:layout_below="@+id/checkout_delivery_time_layout"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="#df6d33"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:id="@+id/button_proceed_to_payments" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--starting of the payment option Selection Section-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout_payment_section"
+        android:layout_below="@+id/checkout_options_section"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/checkout_payment_title_layout"
+            android:background="@color/event_remaining"
+            android:clickable="true"
+
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Payment Options"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:id="@+id/textView25" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView6"
+                android:src="@drawable/dropdown"
+                android:scaleType="fitXY"
+                android:layout_alignBottom="@+id/textView25"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkout_payment_child"
+            android:layout_below="@+id/checkout_payment_title_layout"
+            android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:id="@+id/checkout_payment_layout"
+            android:layout_marginRight="8dp"
+            android:visibility="visible"
+            android:padding="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Payment Options"
+                android:id="@+id/textView20"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup_payment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView20"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation='horizontal'>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash On Delivery"
+                android:id="@+id/cod_radio_button"
+                android:checked="true"
+                android:textSize="14sp"
+                android:enabled="true"
+                android:clickable="true"
+                android:buttonTint="#777777" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:id="@+id/online_radio_button"
+                android:layout_marginLeft="30dp"
+                android:checked="false"
+                android:textSize="14sp"
+                android:buttonTint="#777777" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Order"
+                android:layout_below="@+id/checkout_payment_layout"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="#df6d33"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/button_place_order" />
+     </RelativeLayout>
+
+</RelativeLayout>
+  </RelativeLayout>
+
+</RelativeLayout>

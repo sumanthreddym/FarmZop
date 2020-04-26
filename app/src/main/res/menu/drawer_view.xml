@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/first_fragment"
+            android:icon="@drawable/fzgrey"
+            android:title="Farmzop Exclusives" />
+        <item
+            android:id="@+id/second_fragment"
+            android:icon="@drawable/storeme"
+            android:title="Non Farmzop Products" />
+        <item
+            android:id="@+id/third_fragment"
+            android:icon="@drawable/three"
+            android:title="Offers" />
+        <item
+            android:id="@+id/four_fragment"
+            android:icon="@drawable/delivery"
+            android:title="Orders" />
+        <item
+            android:id="@+id/five_fragment"
+            android:icon="@drawable/five"
+            android:title="Profile"
+            />
+    </group>
+
+    <group
+        android:id="@+id/secondgroup">
+
+                <item
+                    android:id="@+id/six_fragment"
+                    android:icon="@drawable/phone"
+                    android:title="Call Us" />
+                <item
+                    android:icon="@drawable/rate"
+                    android:id="@+id/seven_fragment"
+                    android:title="Rate Us" />
+                <item
+                    android:id="@+id/eight_fragment"
+                    android:icon="@drawable/help"
+                    android:title="Help" />
+                <item
+                    android:id="@+id/nine_fragment"
+                    android:icon="@drawable/share"
+                    android:title="Share App" />
+                <item
+                    android:id="@+id/ten_fragment"
+                    android:icon="@drawable/harvest"
+                    android:title="About Farmzop" />
+
+
+    </group>
+</menu>

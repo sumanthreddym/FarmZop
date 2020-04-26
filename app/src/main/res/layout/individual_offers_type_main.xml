@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#dddddd"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/offer_of_the_day_layout">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/g1"
+            android:scaleType="fitXY"
+            android:id="@+id/offer_of_the_day_image" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blackgradient"
+            android:text="Deals of the Day"
+            android:textColor="#ffffff"
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:id="@+id/bundle_banner"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/offer_of_the_day_layout">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/bundle_icon"
+            android:src="@drawable/gift"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bundle Offers"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bundle_icon"
+            android:layout_toEndOf="@+id/bundle_icon"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/bundle_text" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/gray_right_arrow"
+            android:padding="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Get great offers on a complete bundle"
+            android:id="@+id/textView34"
+            android:layout_below="@+id/bundle_text"
+            android:layout_alignLeft="@+id/bundle_text"
+            android:layout_alignStart="@+id/bundle_text"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_below="@+id/bundle_banner"
+        android:layout_marginTop="1dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/savings"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Super Saver Offers"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/supersaver_text" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/gray_right_arrow"
+            android:padding="15dp"
+            android:id="@+id/imageView7"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Save more on Your montly bill"
+            android:id="@+id/textView35"
+            android:layout_below="@+id/supersaver_text"
+            android:layout_alignLeft="@+id/supersaver_text"
+            android:layout_alignStart="@+id/supersaver_text"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

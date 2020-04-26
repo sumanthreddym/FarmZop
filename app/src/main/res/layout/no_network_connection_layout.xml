@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="There&apos;s no network connection right now. Try again later."
+        android:id="@+id/no_internet_conecton_text"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/no_internet_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/no_internet_image"
+        android:src="@drawable/nointernet"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Retry"
+        android:id="@+id/retry_button"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/no_internet_conecton_text" />
+</RelativeLayout>

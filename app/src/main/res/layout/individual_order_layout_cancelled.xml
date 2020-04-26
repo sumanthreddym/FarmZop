@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:padding="5dp"
+    android:background="#ffffff"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_details_cancelled"
+        android:background="@drawable/rounded_rectangle"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/order_id"
+            android:id="@+id/orderidtext_cancelled"
+            android:textSize="@dimen/orders_text_head"
+            android:textStyle="bold"
+            android:textColor="@color/order_text"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_alignTop="@+id/orderdatetext_cancelled"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/order_date"
+            android:id="@+id/orderdatetext_cancelled"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/orders_text_head"
+            android:textStyle="bold"
+            android:textColor="@color/order_text"        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/order_amount"
+            android:id="@+id/orderamounttext_cancelled"
+            android:layout_alignTop="@+id/orderdatetext_cancelled"
+            android:layout_toRightOf="@+id/orderdatetext_cancelled"
+            android:layout_marginLeft="50dp"
+            android:textSize="@dimen/orders_text_head"
+            android:textStyle="bold"
+            android:textColor="@color/order_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="45468969"
+            android:id="@+id/order_id_cancelled"
+            android:layout_alignTop="@+id/order_date_cancelled"
+            android:gravity="center"
+            android:layout_alignLeft="@+id/orderidtext_cancelled"
+            android:textSize="@dimen/orders_text_sub"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/order_text_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="21 July 2015"
+            android:id="@+id/order_date_cancelled"
+            android:textSize="@dimen/orders_text_sub"
+            android:layout_alignTop="@+id/order_amount_cancelled"
+            android:layout_alignLeft="@+id/orderdatetext_cancelled"
+            android:layout_alignStart="@+id/orderdatetext_cancelled"
+            android:textColor="@color/order_text_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="250"
+            android:id="@+id/order_amount_cancelled"
+            android:layout_below="@+id/orderamounttext_cancelled"
+            android:layout_toRightOf="@+id/textView9_cancelled"
+            android:textSize="@dimen/orders_text_sub"
+            android:textColor="@color/order_text_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Rs"
+            android:id="@+id/textView9_cancelled"
+            android:layout_below="@+id/orderamounttext_cancelled"
+            android:layout_alignLeft="@+id/orderamounttext_cancelled"
+            android:layout_alignStart="@+id/orderamounttext_cancelled"
+            android:textColor="@color/order_text_dark"
+            android:textSize="@dimen/orders_text_sub" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/payment_mode"
+        android:id="@+id/paymentmodetext_cancelled"
+        android:textColor="@color/order_text"
+        android:textStyle="bold"
+        android:layout_below="@+id/order_details_cancelled"
+        android:layout_alignLeft="@+id/order_details_cancelled"
+        android:layout_alignStart="@+id/order_details_cancelled"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/orders_text_head" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" Online"
+        android:id="@+id/payment_mode_cancelled"
+        android:textColor="@color/order_text"
+        android:layout_alignTop="@+id/paymentmodetext_cancelled"
+        android:layout_toRightOf="@+id/paymentmodetext_cancelled"
+        android:layout_toEndOf="@+id/paymentmodetext_cancelled"
+        android:textSize="@dimen/orders_text_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_rectangle"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/paymentmodetext_cancelled"
+        android:layout_alignLeft="@+id/order_details_cancelled"
+        android:layout_alignStart="@+id/order_details_cancelled"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Cancelled"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/orders_cancelled_text"
+        android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

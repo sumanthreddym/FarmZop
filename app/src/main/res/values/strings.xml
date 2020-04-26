@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FarmZop</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_search">Search for products</string>
+    <string name="payment_mode">Payment Mode : </string>
+    <string name="delivering">Delivering</string>
+    <string name="packed">Packed</string>
+    <string name="activity_help">Help</string>
+    <string name="activity_sel_loc">Help</string>
+    <string name="Rs">\u20B9</string>
+    <string name="delivered">Delivered</string>
+    <string name="order_date">ORDER DATE</string>
+    <string name="order_amount">AMOUNT</string>
+    <string name="order_id">ORDER ID</string>
+    <string name="resend_text">Resend</string>
+    <string name="no_code_text">No Code?</string>
+    <string name="whatsthis">Whats  This ?</string>
+    <string name="activity_cart">My Cart</string>
+
+    <string-array name="titles">
+        <item>Atta - Whole Wheat</item>
+        <item>Atta - Whole Wheat</item>
+        <item>Atta - Whole Wheat</item>
+        <item>Atta - Whole Wheat</item>
+        <item>Atta - Whole Wheat</item>
+        <item>Atta - Whole Wheat</item>
+    </string-array>
+    <string-array name="descs">
+        <item>Aashirvaad</item>
+        <item>Aashirvaad</item>
+        <item>Aashirvaad</item>
+        <item>Aashirvaad</item>
+        <item>Aashirvaad</item>
+        <item>Aashirvaad</item>
+    </string-array>
+    <string-array name="buttondescs">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="bags">
+        <item>1kg-pouch</item>
+        <item>2kg-pouch</item>
+        <item>5kg-pouch</item>
+        <item>10kg-pouch</item>
+        <item>1kg-pouch</item>
+        <item>2kg-pouch</item>
+    </string-array>
+
+    <array name="icons">
+        <item>@drawable/atta</item>
+        <item>@drawable/atta</item>
+        <item>@drawable/atta</item>
+        <item>@drawable/atta</item>
+        <item>@drawable/atta</item>
+        <item>@drawable/atta</item>
+    </array>
+    <array name="onebuttons">
+        <item>@drawable/addsmall</item>
+        <item>@drawable/addsmall</item>
+        <item>@drawable/addsmall</item>
+        <item>@drawable/addsmall</item>
+        <item>@drawable/addsmall</item>
+        <item>@drawable/addsmall</item>
+    </array>
+    <array name="twobuttons">
+        <item>@drawable/minusmall</item>
+        <item>@drawable/minusmall</item>
+        <item>@drawable/minusmall</item>
+        <item>@drawable/minusmall</item>
+        <item>@drawable/minusmall</item>
+        <item>@drawable/minusmall</item>
+    </array>
+
+    <string-array name="onedescs">
+        <item>\u20B9400</item>
+        <item>\u20B9400</item>
+        <item>\u20B9400</item>
+        <item>\u20B9400</item>
+        <item>\u20B9400</item>
+        <item>\u20B9400</item>
+    </string-array>
+    <string-array name="twodescs">
+        <item>\u20B9322</item>
+        <item>\u20B9322</item>
+        <item>\u20B9322</item>
+        <item>\u20B9322</item>
+        <item>\u20B9322</item>
+        <item>\u20B9322</item>
+    </string-array>
+
+    <string name="title_activity_non_fzproduct_details">NonFZProductDetailsActivity</string>
+    <string name="title_activity_about_fz">AboutFZ</string>
+    <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_store_locator">Store Locator</string>
+    <string name="title_activity_store_locator_list">Store List</string>
+
+</resources>

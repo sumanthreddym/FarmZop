@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">#FFA500</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">#000000</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">#dd9c9c9c</item>
+        <!--    controls dropdown spinner theme-->
+        <item name="spinnerStyle">@style/Widget.App.Spinner</item>
+        <item name="android:spinnerStyle">@style/Widget.App.Spinner</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+
+    </style>
+
+    <style name="CustomCirclePageIndicator">
+        <item name="fillColor">#000000</item>
+        <item name="strokeColor">#000000</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="radius">6dp</item>
+        <item name="centered">true</item>
+    </style>
+
+<style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">#dd9c9c9c</item>
+ </style>
+
+    <!--Drop down Spinner-->
+    <style name="Widget.App.Spinner" parent="@style/Widget.AppCompat.Spinner">
+        <item name="overlapAnchor">true</item>
+        <item name="android:background">@drawable/dropdown_spinner</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#000000</item>
+        <item name="navigationIcon">@drawable/drawer_big</item>
+
+
+    </style>
+
+    <style name="ToolBarStyle2" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="navigationIcon">@drawable/drawer_big</item>
+
+
+    </style>
+
+</resources>

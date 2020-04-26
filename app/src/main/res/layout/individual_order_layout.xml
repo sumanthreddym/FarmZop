@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:padding="5dp"
+    android:background="#ffffff"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_details"
+        android:background="@drawable/rounded_rectangle"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/order_id"
+        android:id="@+id/textView5"
+        android:textSize="@dimen/orders_text_head"
+        android:textStyle="bold"
+        android:textColor="@color/order_text"
+        android:layout_above="@+id/order_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/order_date"
+        android:id="@+id/textView7"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/orders_text_head"
+        android:textStyle="bold"
+        android:textColor="@color/order_text"        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/order_amount"
+        android:id="@+id/textView8"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_marginLeft="50dp"
+        android:textSize="@dimen/orders_text_head"
+        android:textStyle="bold"
+        android:textColor="@color/order_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="45468969"
+        android:id="@+id/order_id"
+        android:layout_alignTop="@+id/order_date"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/textView5"
+        android:textSize="@dimen/orders_text_sub"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/order_text_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="21 July 2015"
+        android:id="@+id/order_date"
+        android:textSize="@dimen/orders_text_sub"
+        android:layout_alignTop="@+id/order_amount"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:textColor="@color/order_text_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="250"
+        android:id="@+id/order_amount"
+        android:layout_below="@+id/textView8"
+        android:layout_toRightOf="@+id/textView9"
+        android:textSize="@dimen/orders_text_sub"
+        android:textColor="@color/order_text_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Rs"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:textColor="@color/order_text_dark"
+        android:textSize="@dimen/orders_text_sub" />
+    </RelativeLayout>
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/payment_mode"
+        android:id="@+id/textView10"
+          android:textColor="@color/order_text"
+        android:textStyle="bold"
+          android:layout_below="@+id/order_details"
+          android:layout_alignLeft="@+id/order_details"
+          android:layout_alignStart="@+id/order_details"
+          android:layout_marginLeft="25dp"
+          android:layout_marginTop="5dp"
+          android:textSize="@dimen/orders_text_head" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" Online"
+        android:id="@+id/payment_mode"
+        android:textColor="@color/order_text"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10"
+        android:textSize="@dimen/orders_text_head" />
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="@drawable/rounded_rectangle"
+         android:paddingBottom="10dp"
+         android:layout_below="@+id/textView10"
+         android:layout_alignLeft="@+id/order_details"
+         android:layout_alignStart="@+id/order_details"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="5dp"
+         android:id="@+id/orders_bottom"
+         android:visibility="visible">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/delivering"
+        android:id="@+id/textView11"
+        android:textSize="@dimen/orders_text_head"
+        android:textColor="@color/order_text_dark"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/orders_text_head"
+        android:text="@string/packed"
+        android:id="@+id/textView12"
+        android:textColor="@color/order_text_dark"
+        android:layout_alignTop="@+id/textView11"
+
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/delivered"
+        android:id="@+id/textView13"
+        android:textSize="@dimen/orders_text_head"
+        android:textColor="@color/order_text_dark"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="26dp"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+         <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/order_delivering_image"
+        android:background="@drawable/graytickmark"
+        android:layout_below="@+id/textView11"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/order_packed_image"
+        android:background="@drawable/greentickmark"
+        android:layout_alignTop="@+id/order_delivering_image"
+        android:layout_alignRight="@+id/textView12"
+        android:layout_alignEnd="@+id/textView12"
+        android:layout_marginRight="10dp"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/order_delivered_image"
+        android:background="@drawable/graytickmark"
+        android:layout_alignTop="@+id/order_delivering_image"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_marginLeft="20dp"/>
+
+     </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Cancel Order"
+        android:id="@+id/order_cancel_button"
+        android:layout_below="@+id/orders_bottom"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:background="#c65c58"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible" />
+
+
+</RelativeLayout>
